@@ -10,6 +10,7 @@ import uploadRouter from './routers/upload.router.js';
 
 import { dbconnect } from './config/database.config.js';
 import path, { dirname } from 'path';
+
 dbconnect();
 
 const __filename = fileURLToPath(import.meta.url);

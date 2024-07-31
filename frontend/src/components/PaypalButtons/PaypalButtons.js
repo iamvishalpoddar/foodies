@@ -15,7 +15,7 @@ export default function PaypalButtons({ order }) {
     <PayPalScriptProvider
       options={{
         clientId:
-          'AUWcnaHjOUoXVI3IjLpMkM0Kk0Sigq1CUAWP-finHI950yQD2Qni8XPkRbs76Q-_JIT8hJFhKD8YVy3u',
+          'AdFmKetWYAyLX42SLCgABE_cB_T5dl_YhOcvIgfiQ3Oyv0O2y0TIrGYoYot8MGI6V-2UbDImoV4qd_yy',
       }}
     >
       <Buttons order={order} />
@@ -53,6 +53,7 @@ function Buttons({ order }) {
       toast.success('Payment Saved Successfully', 'Success');
       navigate('/track/' + orderId);
     } catch (error) {
+      console.log(error);
       toast.error('Payment Save Failed', 'Error');
     }
   };
